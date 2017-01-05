@@ -14,7 +14,7 @@ WordPress Posts, WordPress Pages, WordPress Customizer, BuddyPress Activity (and
 Work on the customizer is still being completed but you'll be able to change the colours, add logos, include your analytics codes and more.
 
 ## Responsiveness
-Learning from the development of Surface Theme there have been some conscious UI changes to enhance UX. For 1:1 pixel ratio devices this theme is almost rock.
+Learning from the development of Surface Theme there have been some UI changes to enhance UX. For 1:1 pixel ratio devices this theme is almost rock.
 
 ## Why put an unfinished theme live?
 It's a work in progress, each feature has its own merits for the platforms namely WordPress and BuddyPress. I like these features and so do many others, releasing them in stages allows me 
