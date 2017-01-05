@@ -1,0 +1,154 @@
+div.messages {
+  margin: -20px 0 0 0;
+}
+
+article.message {
+  clear: both;
+  overflow-y: hidden;
+  padding: 20px;
+  margin: 0 -20px;
+}
+
+article.message:nth-child(even) {
+  background: palette(Grey, 300);
+}
+
+article.message:last-child {
+  margin-bottom: 0;
+}
+
+article.message div.table {
+  display: table;
+}
+
+article.message div.table div.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+article.message div.table div.avatar {
+  width: 40px;
+}
+
+article.message div.table div.detail {
+  padding-left: 10px;
+}
+
+article.message div.table div.detail h2 {
+  font-family: titbold, sans-serif;
+  font-size: 14px;
+}
+
+article.message p.from-to {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+
+article.message p.from-to:before {
+  content: "\f017";
+  float: left;
+  margin: 0 5px 0 0;
+}
+
+article.message p.from-to span.from, article.message p.from-to span.to {
+  font-family: titbold, sans-serif;
+}
+
+article.message ul.options {
+  font-size: 10px;
+  font-family: titbold, sans-serif;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+article.message ul.options li {
+  float: left;
+  margin-right: 10px;
+}
+
+article.message ul.options li a {
+  color: palette(Grey, 600);
+}
+
+article.message ul.options li.select label {
+  float: left;
+  color: palette(Grey, 600);
+}
+
+article.message ul.options li.select label input {
+  float: left;
+  margin: -1px 5px 0 0;
+}
+
+article.message ul.options li.star a:before {
+  content: "\f006";
+  float: left;
+  margin: -2px 5px 0 0;
+}
+
+article.message ul.options li.star a:hover:before, article.message ul.options li.star a:active:before {
+  content: "\f005";
+}
+
+article.message ul.options li.read a:before {
+  content: "\f00c";
+  float: left;
+  margin: -2px 5px 0 0;
+}
+
+article.message ul.options li.unread a:before {
+  content: "\f00d";
+  float: left;
+  margin: -2px 5px 0 0;
+}
+
+article.message ul.options li.delete a:before {
+  content: "\f014";
+  float: left;
+  margin: -2px 5px 0 0;
+}
+
+div.notifications-options-nav, div.messages-options-nav {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin: 20px 0;
+  overflow-y: hidden;
+}
+
+div.notifications-options-nav label.bulk-select, div.messages-options-nav label.bulk-select {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+}
+
+div.notifications-options-nav label.bulk-select input, div.messages-options-nav label.bulk-select input {
+  float: left;
+  margin: 9px 5px 0 0;
+}
+
+div.notifications-options-nav label.bp-screen-reader-text, div.messages-options-nav label.bp-screen-reader-text {
+  display: none;
+}
+
+div.notifications-options-nav select, div.notifications-options-nav input.button, div.messages-options-nav select, div.messages-options-nav input.button {
+  float: left;
+}
+
+div.notifications-options-nav select, div.messages-options-nav select {
+  height: 30px;
+  line-height: 30px;
+  background: #FFF;
+  border: 1px solid palette(Grey, 400);
+  margin: 0 10px;
+}
+
+div.notifications-options-nav input.button, div.messages-options-nav input.button {
+  background: palette(Grey, 400);
+  color: palette(Grey, 600);
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 0 10px;
+}

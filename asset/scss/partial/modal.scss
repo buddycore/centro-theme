@@ -1,0 +1,124 @@
+ div.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .75);
+    z-index: 10;
+    div.contain {
+        max-width: 500px;
+        background: #FFF;
+        padding: 40px;
+        position: fixed;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        div.inner {
+            position: relative;
+            button.close {
+                position: absolute;
+                top: -40px;
+                right: -40px;
+                width: 40px;
+                height: 40px;
+                background: palette(Grey, 400);
+                line-height: 40px;
+                text-align: center;
+                &:before {
+                    content: "\f00d";
+                    font-size: 18px;
+                }
+                span {
+                    display: none;
+                }
+            }
+        }
+        div.standardise {
+            margin: 0;
+            position: relative;
+            h6 {
+                border-bottom: none;
+                padding-bottom: 0;
+                font-size: 18px;
+                text-transform: capitalize;
+                &:before {
+                    content: "\f1d8";
+                    float: left;
+                    font-size: 18px;
+                    margin: 0 10px 0 0;
+                }
+            }
+
+        }
+        form {
+            margin-top: 20px;
+            fieldset {
+                input {
+                    width: 60%;
+                    background: palette(Grey, 400);
+                    float: left;
+                    height: 40px;
+                    padding: 0 10px;
+                    font-family: titbold, sans-serif;
+                    border: 1px solid palette(Grey, 400);
+                }
+                input:focus {
+                    
+                }
+                ::-webkit-input-placeholder {
+                   color: palette(Grey, 700);
+                }
+
+                :-moz-placeholder { /* Firefox 18- */
+                    color: palette(Grey, 700);
+                }
+
+                ::-moz-placeholder {  /* Firefox 19+ */
+                    color: palette(Grey, 700);
+                }
+
+                :-ms-input-placeholder {  
+                    color: palette(Grey, 700);  
+                }
+                button {
+                    float: left;
+                    width: 40%;
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 10px;
+                    font-family: titbold, sans-serif;
+                    color: rgba(255, 255, 255, .75);
+                    background: palette(Grey, 800);
+                    text-transform: uppercase;
+                    font-size: 10px;
+                }   
+            }
+        }
+    }
+ }
+
+@media screen and (max-width: 750px) {
+    div.modal {
+        div.contain {
+            padding: 20px;
+            width: 90%;
+            top: 20px;
+            div.inner {
+                button.close {
+                    top: -20px;
+                    right: -20px;
+                }
+                div.standardise {
+                    h6 {
+                        font-size: 14px;
+                        &:before {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

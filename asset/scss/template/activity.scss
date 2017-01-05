@@ -1,0 +1,629 @@
+div.padder {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+div.container {
+    background: #FFF;
+    float: left;
+    width: 100%;
+    clear: both;
+}
+
+@media screen and (max-width: 750px) {
+    div.padder {
+        padding: 10px;
+    }
+}
+
+header.mast {
+    padding: 20px;
+    background: rgba(0, 0, 0, .85);
+    h2 {
+        font-size: 14px;
+        font-family: 'titbold', sans-serif;
+        color: rgba(255, 255, 255, .5);
+    }
+    p {
+        margin-top: 10px;
+        color: rgba(255, 255, 255, .3);
+        font-size: 12px;
+        text-transform: capitalize;
+    }
+}
+
+form.activity-post-form {
+    background-image: linear-gradient(to top, palette(Grey, 500), #FFF 3px);
+    padding: 10px;
+    overflow-y: hidden;
+    width: 100%;
+    clear: both;
+    div#message {
+        margin-bottom: 10px;
+    }
+    div#whats-new-container {
+        div#whats-new-avatar {
+            float: left;
+            width: 10%;
+            display: none;
+            a {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        div#whats-new-content {
+            label {
+                display: none;
+            }
+            input, select, textarea {
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+                font-family: 'titbold', sans-serif;
+                border: 1px solid palette(Grey, 400);
+                color: palette(Grey, 800);
+                transition: .1s linear border, .1s linear background;
+                background: palette(Grey, 200);
+            }
+            input:focus, select:focus, textarea:focus {
+                background: palette(Grey, 100);
+            }
+            textarea {
+                height: 80px;
+                resize: vertical;
+            }
+
+            div#whats-new-options {
+                display: block !important;
+                margin-top: 10px;
+                div#whats-new-submit {
+                    button {
+                        line-height: 40px;
+                        text-align: center;
+                        padding: 0 20px;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        color: rgba(255, 255, 255, .75);
+                        width: 50%;
+                        float: right;
+                        font-family: 'titbold', sans-serif;
+                        cursor: pointer;
+                    }
+                }
+                div.posting-in {
+                    select {
+
+                    }
+                }
+                div#whats-new-post-in-box {
+                    select {
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.activity {
+
+    div.message.no-results {
+
+    }
+}
+
+ul#activity-stream {
+    li.load-more, li.load-newest {
+        a {
+            text-align: center;
+            line-height: 40px;
+            display: block;
+            width: 100%;
+            color: rgba(255, 255, 255, .5);
+            text-transform: uppercase;
+            font-family: 'titbold';
+            font-size: 10px;
+        }
+    }
+    li.load-more {
+        padding-bottom: 20px;
+    }
+    li.load-more.loading {
+        a {
+            opacity: .5;
+        }
+    }
+    > li:nth-child(even) {
+        background: palette(Grey, 300);
+    }
+    > li {
+        padding: 20px;
+        float: left;
+        width: 100%;
+        div.inner {
+            div.activity-content {
+                div.activity-header {
+                    display: table;
+                    div.avatar {
+                        a {
+                            display: table-cell;
+                            vertical-align: middle;
+                        }
+                        a.avatar {
+                            width: 50px;
+                            padding-right: 10px;
+                            img {
+                                
+                            }
+                        }
+                        a.permalink {
+                            font-size: 12px;
+                            font-family: titbold, sans-serif;
+                            color: palette(Grey, 900);
+                            &:before {
+                                content: "\f017";
+                                float: left;
+                                margin: -1px 5px 0 0;
+                            }
+                        }
+                        a.permalink:hover, a.permalink:active {
+                            &:before {
+                                content: "\f0c1";
+                                margin-right: 4px;
+                            }
+                        }
+                    }
+                    div.detail {
+                        width: 100%;
+                        margin-top: 20px;
+                        font-size: 12px;
+                        font-family: titbold, sans-serif;
+                        line-height: 14px;
+                        img {
+                            display: none;
+                        }
+                    }
+                }
+                div.activity-inner {
+                    margin-top: 20px;
+                    img {
+                        margin-top: 20px;
+                    }
+                    span.activity-read-more {
+                        display: block;
+                        margin-top: 20px;
+                        font-size: 12px;
+                        font-family: titbold, sans-serif;
+                        a {
+                            height: 30px;
+                            line-height: 30px;
+                            color: palette(Grey, 600);
+                            display: inline-block;
+                            &:before {
+                                content: "\F142";
+                                width: 30px;
+                                text-align: center;
+                                background: palette(Grey, 400);
+                                float: left;
+                                margin: 0 10px 0 0;
+                            }
+                        }
+                    }
+                }
+                div.activity-meta {
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                    transition: .2s linear opacity;
+                    span.fav-count {
+                        line-height: 28px;
+                        float: left;
+                        margin-right: 5px;
+                        padding: 0 10px;
+                        border: 1px solid palette(Grey, 400);
+                        color: palette(Grey, 500);
+                        font-family: titbold, sans-serif;
+                        &:before {
+                            content: "\f164";
+                            font-family: FontAwesome;
+                            font-size: 14px;
+                            font-weight: normal;
+                            float: left;
+                            margin-right: 5px;
+                            color: palette(Grey, 500);
+                        }
+                    }
+                    a.spam-activity {
+                        line-height: 28px;
+                        float: left;
+                        margin-left: 5px;
+                        padding: 0 10px;
+                        border: 1px solid palette(Grey, 400);
+                        color: palette(Grey, 500);
+                        &:before {
+                            content: "\f071";
+                            font-family: FontAwesome;
+                            font-size: 14px;
+                            font-weight: normal;
+                            float: left;
+                            margin-right: 5px;
+                            color: palette(Grey, 500);
+                        }
+                    }
+                    div.meta-toggle {
+                        float: left;
+                        ul {                            
+                            li {
+                                padding: 0;
+                                position: relative;
+                                button.meta-toggle {
+                                    padding: 0 10px 0 0;
+                                    display: block;
+                                    float: left;
+                                    color: palette(Grey, 600);
+                                    border: 1px solid palette(Grey, 400);
+                                    height: 30px;
+                                    line-height: 28px;
+                                    background: palette(Grey, 400);
+                                    font-size: 10px;
+                                    text-transform: uppercase;
+                                    font-family: titregular, sans-serif;
+                                    &:before {
+                                        content: "\f25a";
+                                        font-family: FontAwesome;
+                                        display: block;
+                                        background: transparent;
+                                        margin: 0 10px 0 0;
+                                        padding: 0;
+                                        float: none;
+                                        border: none;
+                                        float: left;
+                                        text-indent: 0;
+                                        font-size: 14px;
+                                        background: palette(Grey, 300);
+                                        width: 30px;
+                                    }
+                                    span {
+                                       
+                                    }
+                                }
+                                button.meta-toggle.close {
+                                    &:before {
+                                        content: "\f00d";
+                                    }
+                                }
+                                ul.sub-nav.shown {
+                                    display: block !important;
+                                }
+                                ul.sub-nav {
+                                    position: absolute;
+                                    bottom: 5px;
+                                    left: 0;
+                                    width: 160px;
+                                    background: palette(Grey, 300);
+                                    z-index: 10;
+                                    border: 1px solid palette(Grey, 400);
+                                    display: none;
+                                    font-family: titregular, sans-serif;
+                                    li {
+                                        line-height: 40px;
+                                        background: transparent;
+                                        border-bottom: 1px solid palette(Grey, 400);
+                                        &:last-child {
+                                            border-bottom: none;
+                                        }
+                                        &:nth-child(even) {
+                                            background: darken(palette(Grey, 300), 5%);
+                                        }
+                                        a {
+                                            padding: 0 10px;
+                                            display: block;
+                                            color: palette(Grey, 600);
+                                            &:before {
+                                                font-family: FontAwesome;
+                                                font-size: 14px;
+                                                font-weight: normal;
+                                                float: left;
+                                                margin-right: 10px;
+                                                width: 20px;
+                                                text-align: center;
+                                            }
+                                        }
+                                        a.fav {
+                                            &:before {
+                                                content: "\f087";
+                                            }
+                                        }
+                                        a.unfav {
+                                            &:before {
+                                                content: "\f088";
+                                            }
+                                        }
+                                        a.loading {
+                                            &:after {
+                                                float: right;
+                                                margin: 5px -10px 0 0;
+                                                content: " ";
+                                                background: url(../img/interface/rolling.gif) no-repeat center;
+                                                width: 30px;
+                                                height: 30px;
+                                                opacity: .75;
+                                            }
+                                        }
+                                        a.delete-activity {
+                                            &:before {
+                                                content: "\f014";
+                                            }
+                                        }
+                                        a.acomment-reply {
+                                            &:before {
+                                                content: "\f0e6";
+                                            }
+                                            span {
+                                                border-left: 1px solid palette(Grey, 500);
+                                                padding-left: 6px;
+                                                margin-left: 4px;
+                                            }
+                                        }
+                                        a.view {
+                                            &:before {
+                                                content: "\f064";
+                                            }
+                                        }
+                                        a.spam-activity {
+                                            &:before {
+                                                content: "\f071";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            div.activity-comments {
+                ul {
+                    margin: 20px 0 0 0;
+                    padding: 0;
+                    width: 100%;
+                    float: left;
+                    li {
+                        background: transparent;
+                        border-left: 2px dashed palette(Grey, 400);
+                        margin: 0 0 20px 0;
+                        padding: 0 0 0 20px;
+                        width: 100%;
+                        ul {
+                            margin: 20px 0 0 0;
+                            padding: 0;
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        div.comment-header {
+                            display: table;
+                            font-size: 12px;
+                            font-family: 'titbold';
+                            div.table-cell {
+                                display: table-cell;
+                                vertical-align: middle;
+                            }
+                            div.acomment-avatar {
+                                padding-right: 10px;
+                                width: 40px;
+                                img {
+                                    border-radius: 2px;
+                                }
+                            }
+                            div.acomment-meta {
+                                line-height: 14px;
+                            }
+                        }
+                        div.acomment-content {
+                            font-size: 14px;
+                            margin-top: 10px;
+                            span.activity-read-more {
+                                display: block;
+                                margin-top: 20px;
+                                font-size: 12px;
+                            }
+                        }
+                        div.acomment-options {
+                            font-size: 10px;
+                            text-transform: uppercase;
+                            margin-top: 20px;
+                            transition: .2s linear opacity;
+                            overflow-y: hidden;
+                            a {
+                                padding: 0 0 0 10px;
+                                display: block;
+                                float: left;
+                                color: palette(Grey, 600);
+                                border: 1px solid palette(Grey, 400);
+                                margin-right: 5px;
+                                height: 30px;
+                                line-height: 28px;
+                                background: palette(Grey, 400);
+                                &:after, &:before {
+                                    width: 30px;
+                                    height: 30px;
+                                    text-align: center;
+                                    border: 1px solid palette(Grey, 400);
+                                    background: palette(Grey, 300);
+                                    color: palette(Grey, 600);
+                                    display: block;
+                                    float: right;
+                                    line-height: 28px;
+                                    margin-left: 10px;
+                                    font-family: FontAwesome;
+                                    font-size: 14px;
+                                    font-weight: normal;
+                                    margin: -1px -1px 0 10px;
+                                    
+                                }
+                                &:before {
+                                    float: left;
+                                    margin: -1px 0 0 -11px;
+                                    content: " ";
+                                    background: url(../img/interface/rolling.gif) no-repeat center;
+                                    display: none;
+                                }
+                            }
+                            a.loading {
+                                &:before {
+                                    display: block;
+                                }
+                            }
+                            a.delete {
+                                width: 30px;
+                                height: 30px;
+                                background: palette(Grey, 400);
+                                border: none;
+                                float: left;
+                                text-indent: -9999px;
+                                margin: 0;
+                                padding: 0;
+                                color: lighten(palette(Grey, 500), 10%);
+                                &:before {
+                                    content: "\f014";
+                                    font-family: FontAwesome;
+                                    display: block;
+                                    background: transparent;
+                                    margin: 0;
+                                    padding: 0;
+                                    float: none;
+                                    border: none;
+                                    float: left;
+                                    text-indent: 0;
+                                }
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                            a.fav {
+                                &:after {
+                                    content: "\F08A";
+                                }
+                            }
+                            a.unfav {
+                                &:after {
+                                    content: "\f004";
+                                }
+                            }
+                            a.acomment-reply {
+                                &:after {
+                                    content: "\f0e6";
+                                }
+                                span {
+                                    border-left: 1px solid palette(Grey, 500);
+                                    padding-left: 6px;
+                                    margin-left: 4px;
+                                }
+                            }
+                            a.view {
+                                &:after {
+                                    content: "\f064";
+                                }
+                            }
+                            a.spam-activity-comment {
+                                line-height: 28px;
+                                float: left;
+                                margin-left: 5px;
+                                padding: 0 10px;
+                                border-radius: 2px;
+                                border: 1px solid palette(Grey, 400);
+                                color: palette(Grey, 500);
+                                font-family: titbold, sans-serif;
+                                background: palette(Grey, 300);
+                                &:before {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                form {
+                    display: none;
+                    clear: both;
+                    div#message {
+                        background: palette(Red, 100);
+                        border-left: 5px solid palette(Red, 500);
+                        padding: 10px 30px 10px 10px;
+                        font-size: 12px;
+                        font-family: 'titbold';
+                        margin-top: 20px;
+                        color: palette(Red, 500);
+                        position: relative;
+                        cursor: pointer;
+                        line-height: 18px;
+                        &:after {
+                            font-family: FontAwesome;
+                            font-size: 14px;
+                            font-weight: normal;
+                            content: "\f00d";
+                            position: absolute;
+                            right: 10px;
+                            top: 9px;
+                        }
+                    }
+                    div.ac-reply-content {
+                        margin-top: 20px;
+                        float: left;
+                        width: 100%;
+                        div.ac-textarea {
+                            label {
+                                display: none;
+                            }
+                            textarea {
+                                width: 100%;
+                                padding: 10px;
+                                font-size: 14px;
+                                font-family: 'titbold';
+                                border: 1px solid palette(Grey, 400);
+                                font-family: 'titbold';
+                                color: palette(Grey, 800);
+                                transition: .1s linear border, .1s linear background;
+                            }
+                            textarea:focus {
+                                background: palette(Grey, 200);
+                            }
+                            textarea {
+                                height: 100px;
+                                resize: vertical;
+                            }
+                        }
+                        div.submit {
+                            margin-top: 10px;
+                            button, a {
+                                float: right;
+                            }
+                            button {    
+                                line-height: 40px;
+                                text-align: center;
+                                padding: 0 20px;
+                                font-size: 10px;
+                                text-transform: uppercase;
+                                font-family: 'titbold';
+                                color: rgba(255, 255, 255, .75);
+                                width: 100%;
+                                width: 40%;
+                            }
+                            a {
+                                line-height: 40px;
+                                font-size: 10px;
+                                text-transform: uppercase;
+                                padding: 0 10px;
+                                font-family: 'titbold';
+                                color: palette(Grey, 500);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

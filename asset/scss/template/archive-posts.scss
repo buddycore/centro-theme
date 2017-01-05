@@ -1,0 +1,321 @@
+div.mast {
+    overflow-y: hidden;
+    display: table;
+    padding: 20px;
+    background: url(../img/tile/gplay.png), palette(Grey, 900);
+    background-attachment: fixed;
+    width: 100%;
+    color: rgba(255, 255, 255, .5);
+    div.avatar, div.detail {
+        display: table-cell;
+        vertical-align: top;
+    }
+    div.avatar {
+        width: 170px;
+        padding-right: 20px;
+        img {
+            border-radius: 2px;
+            width: 100%;
+        }
+    }
+    div.detail {
+        h2 {
+            font-size: 18px;
+            font-family: titbold, sans-serif;
+            font-weight: 700;
+        }
+        div.desc {
+            margin-top: 10px;
+            line-height: 22px;
+            max-width: 400px;
+        }
+        ul.social {
+            float: left;
+            padding: 0;
+            opacity: .75;
+            clear: both;
+            margin-top: 20px;
+            display: block !important;
+            li {
+                a {
+                    color: palette(Grey, 600);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    div.mast {
+        padding: 10px;
+        div.avatar {
+            width: 25%;
+            padding-right: 10px;
+        }
+        div.detail {
+            width: 75%;
+            ul.social {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+div.posts {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    clear: both;
+    @media screen and (max-width: 750px) {
+        padding: 5px;
+    }
+}
+
+article.item.sticky {
+    div.inner {
+        &:before {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px;
+            font-size: 9px;
+            text-transform: uppercase;
+            content: "Featured Post";
+            color: palette(Grey, 500);
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: titbold, sans-serif;
+        }
+        &:after {
+            color: palette(Grey, 500);
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            text-align: center;
+            content: "\f08d";
+        }
+        padding-top: 60px;
+    }
+}
+
+article.item {
+    padding: 10px;
+    display: flex;
+    width: 25%;
+    @media screen and (max-width: 1680px) {
+        width: 33.3333%;
+    }
+    @media screen and (max-width: 1200px) {
+        width: 50%;
+    }
+    @media screen and (max-width: 850px) {
+        width: 100%;
+    }
+    @media screen and (max-width: 750px) {
+        width: 50%;
+        padding: 5px;
+    }
+    @media screen and (max-width: 550px) {
+        width: 100%;
+    }
+    div.inner {
+        background: palette(Grey, 300);
+        width: 100%;
+        padding: 20px 20px 60px 20px;
+        position: relative;
+    }
+}
+
+figure.post-thumbnail {
+    margin: -20px -20px 20px -20px;
+    img {
+        width: 100%;
+    }
+    a {
+
+    }
+}
+
+div.excerpt {
+    p.categories {
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-family: 'titbold';
+        font-size: 18px;
+        line-height: 22px;
+    }
+    p.published {
+        margin-top: 10px;
+    }
+    p.categories, p.published {
+        font-size: 11px;
+        font-family: 'titbold';
+    }
+}
+
+div.standardise {
+    margin-top: 20px;
+    font-size: 14px;
+    ul:last-child {
+        margin-bottom: 0;
+    }
+}
+
+ul.actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: palette(Grey, 500);
+    line-height: 40px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: titbold, sans-serif;
+    li {
+        float: left;
+        a {
+            padding: 0 10px;
+            color: palette(Grey, 700);
+            display: block;
+            &:before {
+                margin-right: 5px;
+            }
+        }
+    }
+    li.format {
+        color: palette(Grey, 400);
+        text-align: center;
+        text-transform: capitalize;
+        width: 40px;
+        height: 40px;
+        background: palette(Grey, 600);
+        display: block;
+        float: left;
+        opacity: .5;
+        span {
+            display: none;
+        }
+        &:before {
+            content: "\f0f6";
+        }
+    }
+    li.format.gallery {
+        &:before {
+            content: "\f03e";
+        }
+    }
+    li.format.image {
+        &:before {
+            content: "\f1c5";
+        }
+    }
+    li.format.audio {
+        &:before {
+            content: "\f001";
+        }
+    }
+    li.format.video {
+        &:before {
+            content: "\f03d";
+        }
+    }
+    li.format.aside {
+        &:before {
+            content: "\f03e";
+        }
+    }
+    li.format.status {
+        &:before {
+            content: "\f1ae";
+        }
+    }
+    li.format.link {
+        &:before {
+            content: "\f0c1";
+        }
+    }
+    li.format.quote {
+        &:before {
+            content: "\f10d";
+        }
+    }
+    li.format.chat {
+        &:before {
+            content: "\f0e6";
+        }
+    }
+    li.comments {
+        a {
+            &:before {
+                content: "\f086";
+            }
+        }
+    }
+    li.permalink {
+        float: right;
+        a {
+            padding: 0 20px;
+            background: palette(Grey, 600);
+            color: palette(Grey, 400);
+        }
+    }
+}
+
+div.pagination {
+    margin: 0 20px 20px 20px;
+    height: 40px;
+    overflow-y: hidden;
+    font-size: 10px;
+    font-family: titbold, sans-serif;
+    position: relative;
+    @media screen and (max-width: 750px) {
+        margin: 0 10px 10px 10px;
+    }
+    &:after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 40px;
+        background: palette(Grey, 500);
+        left: 0;
+        right: 0;
+        content: "";
+        z-index: 1;
+    }
+    div.inner {
+        position: relative;
+        z-index: 2;
+        background: palette(Grey, 400);
+        overflow-y: hidden;
+        float: left;
+        span, a {
+            background: palette(Grey, 500);
+            height: 40px;
+            line-height: 40px;
+            display: block;
+            float: left;
+            padding: 0 17px;
+            margin: 0 10px 0 0;
+            color: palette(Grey, 700);
+        }
+        span.current {
+            background: palette(Grey, 300);
+        }
+        a.next, a.prev { display: none; }
+    }
+}
+
+div.message {
+    
+}
+
+div.message.no-results {
+    
+}

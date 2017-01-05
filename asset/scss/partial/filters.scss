@@ -1,0 +1,591 @@
+nav.filter {
+    height: 50px;
+    background: #FFF;
+    div.links {
+        float: left;
+        font-size: 10px;
+        font-family: titbold, sans-serif;
+        padding-left: 10px;
+        ul {
+            li.loading {
+                a {
+                    transition: none;
+                    background: url(../img/interface/loader.gif) no-repeat 10px center;
+                    padding-left: 35px;
+                }
+            }
+            li {
+                float: left;
+                line-height: 50px;
+                position: relative;
+                a {
+                    display: block;
+                    color: palette(Grey, 800);
+                    padding: 0 10px;
+                    float: left;
+                    &:before {
+                        float: left;
+                        margin: 0 10px 0 0;
+                    }
+                    span {
+                        text-align: center;
+                        float: right;
+                        margin: 12.5px 0 0 10px;
+                        width: 25px;
+                        height: 25px;
+                        line-height: 25px;
+                        background: darken(palette(Grey, 300), 5%);
+                        color: palette(Grey, 800) !important;
+                        &:before {
+                            content: "\f107";
+                        }
+                        span {
+                            display: none;
+                        }
+                    }
+                    span.close {
+                        &:before {
+                            content: "\f106";
+                        }
+                    }
+                }
+                ul.sub-menu {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 20;
+                    background: #FFF;
+                    width: 200px;
+                    li {
+                        height: 41px;
+                        line-height: 41px;
+                        float: none;
+                        position: relative;
+                        border-bottom: 1px solid palette(Grey, 400);
+                        a {
+                            display: block;
+                            width: 100%;
+                            span {
+                                margin: 7.5px 0 0 10px;
+                                transform: rotate(-90deg);
+                            }
+                        }
+                        ul.sub-menu {
+                            position: absolute;
+                            left: 100%;
+                            top: 0;
+                        }
+                        ul.active {
+                            display: block;
+                        }
+                    }
+                }
+                ul.active {
+                    display: block;
+                }
+            }
+            li#activity-personal-li {
+                a {
+                    &:before {
+                        content: "\f142";
+                    }
+                }
+            }
+            li#xprofile-personal-li {
+                a {
+                    &:before {
+                        content: "\f2be";
+                    }
+                }
+            }
+            li#blogs-personal-li {
+                a {
+                    &:before {
+                        content: "\f0e8";
+                    }
+                }
+            }
+            li#notifications-personal-li {
+                a {
+                    &:before {
+                        content: "\f0ac";
+                    }
+                }
+            }
+            li#messages-personal-li {
+                a {
+                    &:before {
+                        content: "\f2b7";
+                    }
+                }
+            }
+            li#friends-personal-li {
+                a {
+                    &:before {
+                        content: "\f2c0";
+                    }
+                }
+            }
+            li#groups-personal-li {
+                a {
+                    &:before {
+                        content: "\f0c0";
+                    }
+                }
+            }
+            li#settings-personal-li {
+                a {
+                    &:before {
+                        content: "\f013";
+                    }
+                }
+            }
+            li#inbox-personal-li {
+                a {
+                    &:before {
+                        content: "\f01c";
+                    }
+                }
+            }
+            li#starred-personal-li {
+                a {
+                    &:before {
+                        content: "\f005";
+                    }
+                }
+            }
+            li#sentbox-personal-li {
+                a {
+                    &:before {
+                        content: "\f1d9";
+                    }
+                }
+            }
+            li#compose-personal-li {
+                a {
+                    &:before {
+                        content: "\f044";
+                    }
+                }
+            }
+            li#notices-personal-li {
+                a {
+                    &:before {
+                        content: "\f0ac";
+                    }
+                }
+            }
+        }
+    }
+    div.other {
+        float: right;
+        ul.user-opts {
+            margin: 10px 10px 0 0;
+            li {
+                float: left;
+                margin: 0 0 0 10px;
+                a {
+                    height: 30px;
+                    background: palette(Blue, 500);
+                    color: rgba(255, 255, 255, .75);
+                    padding: 0 10px;
+                    display: block;
+                    line-height: 30px;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    font-family: titbold, sans-serif;
+                    &:after {
+                        width: 30px;
+                        background: palette(Blue, 600);
+                        text-align: center;
+                        content: "\f234";
+                        display: block;
+                        float: right;
+                        margin: 0 -10px 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+ul.no-span {
+    li {
+        a {
+            span {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+nav {
+    label {
+        display: none;
+    }
+    select {
+        border: 1px solid palette(Grey, 400);
+        width: 160px;
+        height: 30px;
+        line-height: 28px;
+        font-size: 10px;
+        font-family: 'titbold', sans-serif;
+        padding: 0 7px;
+        margin: 10px 10px 10px 0;
+    }
+}
+
+form.search-form {
+    width: 160px;
+    margin: 10px 10px 0 0;
+    fieldset {
+        input {
+            border: 1px solid palette(Grey, 400);
+            border-right: none;
+            width: 75%;
+            height: 30px;
+            line-height: 28px;
+            font-size: 10px;
+            font-family: 'titbold', sans-serif;
+            padding: 0 7px;
+            margin-bottom: 0;
+        }
+        input::-webkit-input-placeholder {
+            color: palette(Grey, 500);
+        }
+        input:-moz-placeholder { /* Firefox 18- */
+            color: palette(Grey, 500);    
+        }
+        input::-moz-placeholder {  /* Firefox 19+ */
+            color: palette(Grey, 500);
+        }
+        input:-ms-input-placeholder {  
+            color: palette(Grey, 500);
+        }
+        input:focus {
+            border: 1px solid palette(Grey, 400);
+            background: palette(Grey, 300);
+        }
+        input, button {
+            float: left;
+        }
+        button {
+            height: 30px;
+            line-height: 30px;
+            padding: 0 10px;
+            width: 25%;
+            font-weight: 400;
+            background: palette(Grey, 400);
+            font-family: 'titbold';
+            font-size: 10px;
+            color: palette(Grey, 500);
+            text-transform: uppercase;
+        }
+    }
+}
+
+nav.filter-responsive {
+    display: none;
+    background: #FFF;
+    height: 50px;
+    position: relative;
+    div.links {
+        float: left;
+        font-size: 10px;
+        font-family: titbold, sans-serif;
+        ul.toggle-menu.activity-links {
+            li {
+                a {
+                    span {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        ul.toggle-menu {
+            li {
+                button.toggle-sub {
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    background: palette(Grey, 400);
+                    color: palette(Grey, 700);
+                    span {
+                        display: none;
+                    }
+                    &:before {
+                        content: "\f0c9";
+                    }
+                }
+                button.toggle-sub.close {
+                    &:before {
+                        content: "\f00d";
+                    }
+                }
+                ul.sub-nav {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    z-index: 10;
+                    background: #FFF;
+                    display: none;
+                    li.loading {
+                        a {
+                            transition: none;
+                            background: url(../img/interface/loader.gif) no-repeat 10px center;
+                            padding-left: 35px;
+                        }
+                    }
+                    li.search-form {
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 10px;
+                        display: none;
+                        @media screen and (max-width: 500px) {
+                            display: block;
+                        }
+                        form.search-form {
+                            width: 100% !important;
+                        }
+                    }
+                    li#activity-filter-select {
+                        padding: 10px;
+                        overflow-y: hidden;
+                        display: none;
+                        @media screen and (max-width: 500px) {
+                            display: block;
+                        }
+                        select {
+                            width: 100%;
+                            margin: 0;
+                        }
+                    }
+                    li {
+                        border-bottom: 1px solid palette(Grey, 400);
+                        clear: both;
+                        &:last-child {
+                            border-bottom: none !important;
+                        }
+                        a {
+                            color: palette(Grey, 800);
+                            padding: 0 10px;
+                            line-height: 41px;
+                            display: block;
+                            height: 41px;
+                            &:before {
+                                width: 24px;
+                                text-align: center;
+                                float: left;
+                            }
+                        }
+                        span {
+                            text-align: center;
+                            float: right;
+                            margin: 5px 0 0 0;
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            background: darken(palette(Grey, 300), 5%);
+                            color: palette(Grey, 800) !important;
+                            &:before {
+                                content: "\f107";
+                            }
+                            span {
+                                display: none;
+                            }
+                        }
+                        span.close {
+                            &:before {
+                                content: "\f106";
+                            }
+                        }
+                        ul.sub-menu {
+                            display: none;
+                            background: #FFF;
+                            border-top: 1px solid palette(Grey, 400);
+                            li {
+                                a {
+                                    &:before {
+                                        content: "-";
+                                        float: left;
+                                        margin-right: 5px;
+                                    }
+                                }
+                                ul.sub-menu {
+                                    li {
+                                        a {
+                                            &:before {
+                                                content: "--";
+                                                float: left;
+                                                margin-right: 5px;
+                                            }
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                        ul.sub-menu.active {
+                            display: block;
+                        }
+                    }
+                }
+                ul.sub-nav.active {
+                    display: block;
+                }
+            }
+            li#activity-personal-li {
+                a {
+                    &:before {
+                        content: "\f142";
+                    }
+                }
+            }
+            li#xprofile-personal-li {
+                a {
+                    &:before {
+                        content: "\f2be";
+                    }
+                }
+            }
+            li#blogs-personal-li {
+                a {
+                    &:before {
+                        content: "\f0e8";
+                    }
+                }
+            }
+            li#notifications-personal-li {
+                a {
+                    &:before {
+                        content: "\f0ac";
+                    }
+                }
+            }
+            li#messages-personal-li {
+                a {
+                    &:before {
+                        content: "\f2b7";
+                    }
+                }
+            }
+            li#friends-personal-li {
+                a {
+                    &:before {
+                        content: "\f2c0";
+                    }
+                }
+            }
+            li#groups-personal-li {
+                a {
+                    &:before {
+                        content: "\f0c0";
+                    }
+                }
+            }
+            li#settings-personal-li {
+                a {
+                    &:before {
+                        content: "\f013";
+                    }
+                }
+            }
+            li#inbox-personal-li {
+                a {
+                    &:before {
+                        content: "\f01c";
+                    }
+                }
+            }
+            li#starred-personal-li {
+                a {
+                    &:before {
+                        content: "\f005";
+                    }
+                }
+            }
+            li#sentbox-personal-li {
+                a {
+                    &:before {
+                        content: "\f1d9";
+                    }
+                }
+            }
+            li#compose-personal-li {
+                a {
+                    &:before {
+                        content: "\f044";
+                    }
+                }
+            }
+            li#notices-personal-li {
+                a {
+                    &:before {
+                        content: "\f0ac";
+                    }
+                }
+            }
+        }
+    }
+    h6 {
+        float: left;
+        line-height: 50px;
+        padding-left: 10px;
+        font-size: 10px;
+        font-family: titbold, sans-serif;
+        height: 50px;
+        overflow-y: hidden;
+        color: palette(Grey, 900);
+        span {
+            text-align: center;
+            float: right;
+            margin: 12.5px 0 0 10px;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            background: darken(palette(Grey, 300), 5%);
+            color: palette(Grey, 800) !important;
+        }
+    }
+    h6.back {
+        a {
+            display: block;
+            &:before {
+                content: "\f122";
+                float: left;
+                margin: 1px 5px 0 0;
+            }
+        }
+    }
+    div.other {
+        float: right;
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+        form {
+            fieldset {
+                input {
+
+                }
+                button {
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    nav.filter {
+        display: none;   
+    }
+    nav.filter-responsive {
+        display: block;
+    }
+}

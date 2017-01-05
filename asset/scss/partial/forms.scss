@@ -1,0 +1,497 @@
+form.standardise {
+    clear: both;
+    overflow-y: hidden;
+    fieldset {
+        h4 {
+            margin: 0 -20px 20px -20px;
+            text-align: center;
+            padding: 20px;
+            font-family: 'titbold';
+            font-size: 18px;
+            color: rgba(255, 255, 255, .5);
+            background-image: url(../img/tile/broken-noise.png);
+            background-repeat: repeat;
+            a {
+                display: block;
+                font-weight: 400;
+                text-transform: lowercase;
+                color: rgba(255, 255, 255, .3);
+                font-size: 12px;
+                margin-top: 10px;
+                font-family: titregular, sans-serif;
+            }
+        }
+        p.status {
+            background: palette(Blue, 100);
+            border-left: 5px solid palette(Blue, 700);
+            padding: 10px 30px 10px 10px;
+            font-size: 12px;
+            font-family: 'titbold';
+            margin-bottom: 20px;
+            color: palette(Blue, 700);
+            position: relative;
+            cursor: pointer;
+            line-height: 18px;
+            display: none;
+        }
+        div#message, div.message.error {
+            background: palette(Red, 100);
+            border-left: 5px solid palette(Red, 500);
+            padding: 10px 30px 10px 10px;
+            font-size: 12px;
+            font-family: 'titbold';
+            margin-bottom: 20px;
+            color: palette(Red, 500);
+            position: relative;
+            cursor: pointer;
+            line-height: 18px;
+            &:after {
+                font-family: FontAwesome;
+                font-size: 14px;
+                font-weight: normal;
+                content: "\f00d";
+                position: absolute;
+                right: 10px;
+                top: 9px;
+            }
+        }
+        div.message.error {
+            cursor: text;
+            &:after {
+                display: none;
+            }
+        }
+        div.message.success {
+            border-left: 5px solid palette(Green, 700);
+            background: palette(Green, 100);
+            color: palette(Green, 700);
+        }
+        div.row.halved {
+            margin: 0 0 20px 0;
+            div.column:first-child {
+                padding-right: 10px;
+            }
+            div.column:last-child {
+                padding-left: 10px;
+            }
+        }
+        div.pass-strength {
+            clear: both;
+        }
+        div#pass-strength-result {
+            padding: 15px;
+            background: palette(Grey, 300);
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-family: titbold, sans-serif;
+            display: none;
+            color: rgba(255, 255, 255, .75);
+            &:before {
+                float: left;
+                margin: -3px 5px 0 0;
+            }
+        }
+        div#pass-strength-result.short, div#pass-strength-result.bad, div#pass-strength-result.good, div#pass-strength-result.strong  {
+            display: block;
+        }
+        div#pass-strength-result.short {
+            background: palette(Orange, 500);
+            display: block;
+        }
+        div#pass-strength-result.bad {
+            background: palette(Red, 500);
+        }
+        div#pass-strength-result.good {
+            background: palette(Green, 500);
+        }
+        div#pass-strength-result.strong {
+            background: palette(Purple, 500);
+        }
+        div.row {
+            margin-bottom: 20px;
+            float: left;
+            width: 100%;
+            div.column.one-half {
+                width: 50%;
+            }
+            div.column {
+                float: left;
+                width: 100%;
+                label {
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    font-family: titbold, sans-serif;
+                    margin-bottom: 10px;
+                    display: block;
+                    color: palette(Grey, 800);
+                    span {
+                        color: palette(Red, 700);
+                    }
+                }
+                input, select, textarea {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 14px;
+                    font-family: 'titbold', sans-serif;
+                    border: 1px solid palette(Grey, 400);
+                    font-family: 'titbold';
+                    color: palette(Grey, 800);
+                    transition: .1s linear border, .1s linear background;
+                    background: palette(Grey, 200);
+                }
+                input:focus, select:focus, textarea:focus {
+                    background: palette(Grey, 100);
+                }
+                textarea {
+                    height: 140px;
+                    resize: vertical;
+                }
+                ul.acfb-holder {
+                    width: 100%;
+                    li {
+                        width: 100%;
+                        margin: 0;
+                        input {
+                            width: 100% !important;
+                        }
+                    }
+                }
+                div.error {
+                    font-size: 10px;
+                    font-family: titbold, sans-serif;
+                    display: block;
+                    color: palette(Red, 700);
+                    text-transform: uppercase;
+                    margin: 5px 0 10px 0;
+                    padding-left: 20px;
+                    line-height: 16px;
+                    position: relative;
+                    &:before {
+                        content: "\f06a";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+            div.editfield {
+                p.description {
+                    font-size: 12px;
+                    line-height: 16px;
+                    margin-top: 10px;
+                }
+                p.description:empty {
+                    display: none;
+                }
+                p.field-visibility-settings-toggle, p.field-visibility-settings-notoggle, div.field-visibility-settings-notoggle {
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    display: block;
+                    margin: 10px 0 0 0;
+                    opacity: .7;
+                    font-family: titbold, sans-serif;
+                    &:hover, &:active {
+                        opacity: 1;
+                    }
+                    span.current-visibility-level {
+                        font-family: titbold, sans-serif;
+                    }
+                    a.visibility-toggle-link {
+
+                    }
+                }
+                div.field-visibility-settings {
+                    display: none;
+                    margin-top: 10px;
+                    fieldset {
+                        legend {
+                            font-size: 10px;
+                            text-transform: uppercase;
+                            font-family: titbold, sans-serif;
+                            display: block;
+                            margin-bottom: 10px;
+                        }
+                        ul.radio {
+                            margin-bottom: -10px;
+                            overflow-y: hidden;
+                            li {
+                                float: left;
+                                margin-right: 10px;
+                                label {
+                                    float: left;
+                                    margin: 0 0 10px 0;
+                                    cursor: pointer;
+                                    display: block;
+                                    color: palette(Grey, 800);
+                                    input {
+                                        float: left;
+                                        width: auto;
+                                        margin: 0 5px 0 0;
+                                        cursor: pointer;
+                                    }
+                                    span {
+                                        color: palette(Grey, 800);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    a.field-visibility-settings-close {
+                        display: none;
+                    }
+                }
+            }
+        }
+        div.checkbox {
+            font-size: 10px;
+            text-transform: uppercase;
+            font-family: 'titbold', sans-serif;
+            float: left;
+            width: 100%;
+            padding: 1px 0 0 0;
+            label {
+                display: inline-block;
+                cursor: pointer;
+                margin: 0;
+                input {
+                    float: left;
+                    margin: -1px 5px 0 0;
+                    width: auto;
+                }
+            }
+        }
+        div.submit {
+            button, input {
+                line-height: 40px;
+                text-align: center;
+                padding: 0 20px;
+                font-size: 10px;
+                text-transform: uppercase;
+                font-family: 'titbold', sans-serif;
+                color: rgba(255, 255, 255, .75);
+                width: 100%;
+                font-family: 'titbold', sans-serif;
+                cursor: pointer;
+                border: none !important;
+            }
+        }
+        div.footer {
+            text-align: center;
+            font-size: 10px;
+            text-transform: uppercase;
+            margin-top: 20px;
+            font-family: 'titbold';
+            a {
+
+            }
+        }
+    }
+}
+
+div.register {
+    padding: 0 20px;
+}
+
+form.register {
+    margin: 20px auto;
+    overflow: hidden;
+    width: 800px;
+    background: palette(Grey, 300);
+    padding: 0 20px 20px 20px;
+    fieldset {
+        h4 {
+            text-align: left;
+        }
+        div.basic-details, div.profile-details {
+            width: 50%;
+            float: left;
+            h6 {
+                font-size: 14px;
+                font-family: titbold, sans-serif;
+                margin-bottom: 20px;
+                &:before {
+                    float: left;
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
+        div.basic-details {
+            padding-right: 10px;
+            h6 {
+                &:before {
+                    content: "\f084";
+                }
+            }
+        }  
+        div.profile-details {
+            padding-left: 10px;
+            h6 {
+                &:before {
+                    content: "\f2be";
+                }
+            }
+        }
+        div.blog-details {
+            padding: 20px;
+            border: 1px solid palette(Grey, 400);
+            overflow-y: hidden;
+            float: left;
+            width: 100%;
+            margin-bottom: 20px;
+            div.row {
+                margin-bottom: 0;
+                div.column {
+                    div.checkbox {
+                        label {
+                            margin: 0;
+                            input {
+                                width: auto;
+                                margin: 0 5px 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        div#blog-details {
+            margin-top: 20px;
+            float: left;
+            width: 100%;
+            div.row {
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                div.column.one-half {
+                    &:first-child {
+                        padding-right: 10px;
+                    }
+                    &:last-child {
+                        padding-left: 10px;
+                    }
+                }
+                div.column {
+                    div.editfield.field_radio-buttons {
+                        fieldset {
+                            legend {
+                                font-size: 10px;
+                                text-transform: uppercase;
+                                font-family: titbold, sans-serif;
+                                display: block;
+                                margin-bottom: 10px;
+                                line-height: 16px;
+                            }
+                            div.input-options {
+                                label {
+                                    margin: 0;
+                                    float: left;
+                                    margin-right: 10px;
+                                    input {
+                                        width: auto;
+                                        float: left;
+                                        margin: 0 5px 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 850px) {
+            div#blog-details {
+                div.row {
+                    div.column.one-half {
+                        padding: 0 !important;
+                        width: 100%;
+                        margin-bottom: 20px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    form.register {
+        width: 100%;
+        fieldset {
+            div.basic-details, div.profile-details {
+                float: none;
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    div.register {
+        padding: 0 10px;
+    }
+    form.register {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    form.register {
+        width: 100%;
+    }
+}
+
+form.single {
+    width: 400px;
+    padding: 0 20px 20px 20px;
+    background: palette(Grey, 300);
+    margin: 20px auto;
+    overflow: hidden;
+    @media screen and (max-width: 750px) {
+        width: auto;
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 10px;
+    }
+}
+
+form.post-password-form {
+    p {
+        label {
+            font-size: 10px;
+            font-family: titbold, sans-serif;
+            text-transform: uppercase;
+            input {
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+                font-family: 'titbold', sans-serif;
+                border: 1px solid palette(Grey, 400);
+                font-family: 'titbold';
+                color: palette(Grey, 800);
+                transition: .1s linear border, .1s linear background;
+                background: palette(Grey, 200);
+            }
+        }
+        input[type=submit] {
+            line-height: 40px;
+            text-align: center;
+            padding: 0 20px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-family: 'titbold', sans-serif;
+            color: rgba(255, 255, 255, .75);
+            width: 100%;
+            font-family: 'titbold', sans-serif;
+            cursor: pointer;
+            width: 40%;
+            margin-top: 20px;
+            float: right;
+        }
+    }
+}

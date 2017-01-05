@@ -1,0 +1,102 @@
+div#login {
+    width: 400px;
+    a {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    @media screen and (max-width: 440px) {
+        width: 90%;
+    }
+    h1 {
+        a {
+            margin: 0 auto;
+            background-size: 75%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 80px;
+            width: 320px;
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+    div#login_error, p.message {
+        font-size: 12px;
+        font-family: titbold, sans-serif;
+        background: palette(Grey, 300);
+        line-height: 16px;
+    }
+    form {
+        margin: 0;
+        padding: 20px;
+        box-shadow: none;
+        border-radius: 0;
+        background: palette(Grey, 300);
+        label {
+            font-size: 10px;
+            text-transform: uppercase;
+            font-family: titbold, sans-serif;
+            color: palette(Grey, 800);
+            margin: 0 0 20px 0;
+            display: block;
+            br {
+                display: none;
+            }
+            input {
+                border: 1px solid palette(Grey, 400);
+                padding: 10px;
+                margin: 5px 0 0 0;
+                font-size: 14px;
+                font-family: titbold, sans-serif;
+                outline: none !important;
+                box-shadow: none !important;
+            }
+        }
+        p.forgetmenot { display: none; }
+        p.submit {
+            display: block;
+            width: 100%;
+            input {
+                width: 100%;
+                background: palette(Grey, 500);
+                color: rgba(255, 255, 255, .5);
+                box-shadow: none;
+                text-shadow: none;
+                border-radius: 0;
+                border: none;
+                font-size: 10px;
+                font-family: titbold, sans-serif;
+                text-transform: uppercase;
+                line-height: 40px;
+                padding: 0 20px;
+                height: 40px;
+                transform: none;
+            }
+        }
+        span.password-input-wrapper {
+            input {
+                font-size: 14px;
+                font-family: titbold, sans-serif;
+                padding: 10px;
+            }
+            input.strong {
+                border: 1px solid palette(Green, 500);
+            }
+        }
+        div#pass-strength-result {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-family: titbold, sans-serif
+        }
+        div#pass-strength-result.strong {
+            border: 1px solid palette(Green, 500);
+        }
+        p.description {
+            line-height: 18px;
+            font-size: 12px;
+        }
+    }
+    p#nav, p#backtoblog { display: none; }
+}
