@@ -7904,3 +7904,93 @@ div.message-box ul.options li.star a:before {
 div.message-box ul.options li.star a:hover:before, div.message-box ul.options li.star a:active:before {
   content: "\f005";
 }
+
+div.wp-polls {
+  text-align: left !important;
+  padding: 20px;
+  background: #212121;
+  color: #BDBDBD !important;
+}
+
+div.wp-polls strong {
+  color: #BDBDBD !important;
+}
+
+div.wp-polls p {
+  text-align: left !important;
+}
+
+div.wp-polls div.wp-polls-ans ul.wp-polls-ul {
+  margin: 0 0 20px 0;
+}
+
+div.wp-polls div.wp-polls-ans ul.wp-polls-ul li {
+  padding: 0;
+}
+
+div.wp-polls div.wp-polls-ans ul.wp-polls-ul li:before {
+  display: none !important;
+}
+
+div.wp-polls div.wp-polls-ans ul.wp-polls-ul li small {
+  color: #9E9E9E;
+  font-size: 10px;
+  display: block;
+}
+
+div.wp-polls div.wp-polls-ans ul.wp-polls-ul li input {
+  float: left;
+  margin: 6px 10px 0 0;
+}
+
+div.wp-polls div.wp-polls-ans ul.wp-polls-ul li div.pollbar {
+  margin: 10px 0 0 0;
+  font-size: 0;
+  line-height: 1;
+  height: 10px;
+  background: #9E9E9E;
+  border: none;
+}
+
+div.wp-polls div.wp-polls-ans input[type=button] {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+  border: none;
+  font-family: titbold, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  background: #BDBDBD;
+  color: #212121;
+  cursor: pointer;
+}
+
+div.wp-polls div.wp-polls-ans > p {
+  text-align: left !important;
+  font-size: 10px;
+  font-family: titbold, sans-serif;
+  text-transform: uppercase;
+}
+
+div.wp-polls div.wp-polls-ans a {
+  color: #BDBDBD;
+}
+
+div.wp-polls-loading {
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  padding: 0 10px;
+  font-family: titbold, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  background: #212121;
+  color: #BDBDBD;
+  overflow-y: hidden;
+  margin-top: 5px;
+}
+
+div.wp-polls-loading img {
+  float: left;
+  margin: 12px 5px 0 0;
+}

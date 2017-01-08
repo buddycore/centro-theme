@@ -1,0 +1,90 @@
+div.wp-polls {
+    text-align: left !important;
+    padding: 20px;
+    background: palette(Grey, 900);
+    color: palette(Grey, 400) !important;
+    strong {
+        color: palette(Grey, 400) !important;
+    }
+    p {
+        text-align: left !important;
+        strong {
+
+        }
+    }
+    div.wp-polls-ans {
+        ul.wp-polls-ul {
+            margin: 0 0 20px 0;
+            li {
+                padding: 0;
+                &:before {
+                    display: none !important;
+                }
+                strong {
+                    i {
+
+                    }   
+                }
+                small {
+                    color: palette(Grey, 500);
+                    font-size: 10px;
+                    display: block;
+                }
+                input {
+                    float: left;
+                    margin: 6px 10px 0 0;
+                }
+                div.pollbar {
+                    margin: 10px 0 0 0;
+                    font-size: 0;
+                    line-height: 1;
+                    height: 10px;
+                    background: palette(Grey, 500);
+                    border: none;
+                }
+            }
+        }
+        input[type=button] {
+            height: 30px;
+            line-height: 30px;
+            padding: 0 15px;
+            border: none;
+            font-family: titbold, sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            background: palette(Grey, 400);
+            color: palette(Grey, 900);
+            cursor: pointer;
+        }
+        > p {
+            text-align: left !important;
+            font-size: 10px;
+            font-family: titbold, sans-serif;
+            text-transform: uppercase;
+            strong {
+
+            }
+        }
+        a {
+            color: palette(Grey, 400);
+        }
+    }
+}
+
+div.wp-polls-loading {
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    padding: 0 10px;
+    font-family: titbold, sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    background: palette(Grey, 900);
+    color: palette(Grey, 400);
+    overflow-y: hidden;
+    margin-top: 5px;
+    img {
+        float: left;
+        margin: 12px 5px 0 0;
+    }
+}
